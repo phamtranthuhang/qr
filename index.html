@@ -5,34 +5,91 @@
   <title>Liên kết của tôi</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f0f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
       text-align: center;
-      padding: 50px;
-      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    h1 {
+      margin-top: 30px;
+      font-size: 36px;
+      color: #333;
+    }
+    p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
     }
     a {
-      display: block;
-      margin: 20px;
-      font-size: 20px;
+      display: inline-block;
+      margin: 15px;
+      font-size: 22px;
       text-decoration: none;
-      color: #3366cc;
+      color: #4CAF50;
+      background-color: #fff;
+      border: 2px solid #4CAF50;
+      border-radius: 30px;
+      padding: 12px 30px;
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      background-color: #4CAF50;
+      color: white;
+      transform: scale(1.1);
+    }
+    .qr-section {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .qr-code {
+      text-align: center;
+      margin-top: 20px;
     }
     img {
-      width: 200px; /* Kích thước mã QR */
-      margin-top: 20px;
+      width: 180px;
+      height: 180px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <h1>Chào mừng!</h1>
-  <p>Đây là trang chứa các liên kết của tôi:</p>
-  <a href="https://www.facebook.com/arumbabi">Liên kết 1: Facebook cá nhân</a>
-  <a href="https://www.facebook.com/people/The-Mad-Lab/100071200112735/">Liên kết 2: Facebook nhóm</a>
+  <header>Trang Liên Kết của Tôi</header>
+  <h1>Chào mừng bạn đến với trang của tôi!</h1>
+  <p>Tại đây, bạn có thể tìm các liên kết nhanh đến các trang của tôi.</p>
+
+  <div>
+    <a href="https://www.facebook.com/arumbabi" target="_blank">Facebook cá nhân</a>
+    <a href="https://www.facebook.com/people/The-Mad-Lab/100071200112735/" target="_blank">Facebook nhóm</a>
+  </div>
 
   <h2>Quét mã QR để truy cập nhanh:</h2>
-  <p>Liên kết 1 QR Code:</p>
-  <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.facebook.com/arumbabi&size=200x200" alt="QR Code Liên kết 1">
-  <p>Liên kết 2 QR Code:</p>
-  <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.facebook.com/people/The-Mad-Lab/100071200112735/&size=200x200" alt="QR Code Liên kết 2">
+  <div class="qr-section">
+    <div class="qr-code">
+      <p>Liên kết 1 QR Code:</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.facebook.com/arumbabi&size=200x200" alt="QR Code Liên kết 1">
+    </div>
+    <div class="qr-code">
+      <p>Liên kết 2 QR Code:</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.facebook.com/people/The-Mad-Lab/100071200112735/&size=200x200" alt="QR Code Liên kết 2">
+    </div>
+  </div>
+
 </body>
 </html>
